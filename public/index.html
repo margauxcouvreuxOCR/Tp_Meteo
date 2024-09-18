@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../src/styles.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" defer></script>
+    <script src="https://kit.fontawesome.com/c73d47c5ac.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body class="bg-gray-200">
+    <h1 class="bg-stone-900 text-white text-center font-bold py-2 cursor-pointer" id="titre1" title="Recharger la page">Mon Appli Météo</h1>
+    <h2 class="uppercase font-semibold m-3 text-center">Les prévisions météorologiques en France à 5 jours</h2>
+
+    <main>
+        <div id="recherche" class="grid grid-cols-2 m-5 gap-2">
+            <input type="search" name="searchBar" id="searchBar"
+                placeholder="&#xF002; Entrez le nom d'une ville Française" title="Ecrire le nom de la ville en tenant compte des tirets" style="font-family:Arial, FontAwesome"
+                class="col-span-2 p-2">
+            <button type="button" id="boutonPosition" class="btn"><i class="fa-solid fa-location-dot"></i> Ma
+                Position</button>
+            <button type="button" id="boutonRecherche" class="btn"><i class="fa-solid fa-magnifying-glass-location"></i>
+                Rechercher</button>
+        </div>
+
+        <div id="errorLocation" class="p-4 bg bg-stone-900 text-red-400"></div>
+        <div id="resultats" class="p-4 bg bg-stone-900">
+
+            <div id="lieuGeographique" class="text-white bg-stone-700 p-4  uppercase text-center mb-4"></div>
+
+            <div id="j0" class="text-white bg-stone-700 p-4 uppercase text-center my-2"></div>
+            <div id="j1" class="text-white bg-stone-700 p-4 uppercase text-center my-2"></div>
+            <div id="j2" class="text-white bg-stone-700 p-4 uppercase text-center my-2"></div>
+            <div id="j3" class="text-white bg-stone-700 p-4 uppercase text-center my-2"></div>
+            <div id="j4" class="text-white bg-stone-700 p-4 uppercase text-center my-2"></div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="http://www.prevision-meteo.ch" class="text-xs italic text-gray-400 text-right block m-4 uppercase">
+            <i class="fa fa-link"></i> API Prevision Meteo
+        </a>
+    </footer>
+
+</body>
+
+</html>
